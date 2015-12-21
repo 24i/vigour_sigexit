@@ -42,9 +42,7 @@ var sEXITs = [
 
 module.exports = {
   on: (cb) => {
-    console.log('attaching')
     for (let i = 0, l = sEXITs.length; i < l; i++) {
-      console.log('exit signal', sEXITs[i])
       process.on(sEXITs[i], cb)
     }
   }
