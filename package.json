@@ -1,6 +1,6 @@
 {
   "name": "sigexit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "handler for exits on SIG",
   "main": "src/index.js",
   "scripts": {
