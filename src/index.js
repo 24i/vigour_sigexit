@@ -11,7 +11,7 @@ var sEXITs = [
   'SIGIOT',
   'SIGBUS',
   'SIGFPE',
-  'SIGKILL',
+  // 'SIGKILL',
   'SIGUSR1',
   'SIGSEGV',
   'SIGUSR2',
@@ -21,7 +21,7 @@ var sEXITs = [
   'SIGCHLD',
   'SIGSTKFLT',
   'SIGCONT',
-  'SIGSTOP',
+  // 'SIGSTOP',
   'SIGTSTP',
   'SIGBREAK',
   'SIGTTIN',
@@ -42,7 +42,9 @@ var sEXITs = [
 
 module.exports = {
   on: (cb) => {
-    for (var i = 0, l = sEXITs.length; i < l; i++) {
+    console.log('attaching')
+    for (let i = 0, l = sEXITs.length; i < l; i++) {
+      console.log('exit signal', sEXITs[i])
       process.on(sEXITs[i], cb)
     }
   }
