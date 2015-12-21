@@ -1,3 +1,5 @@
+'use strict'
+
 var sEXITs = [
   'exit',
   'SIGHUP',
